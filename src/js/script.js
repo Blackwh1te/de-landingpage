@@ -52,6 +52,65 @@ const initAutoHeightPartnersLinks = () => {
    autoHeight(partnersLinks);
 };
 
+const initFeedbackModal = () => {
+   const html = document.querySelector('html');
+   const workBtn = document.querySelector('.work__btn');
+   const feedbackModal = document.querySelector('#feedback-modal');
+
+   workBtn.addEventListener('click', () => {
+      html.classList.add('lock');
+      feedbackModal.classList.add('open');
+   });
+};
+
+const initCloseModal = () => {
+   const html = document.querySelector('html');
+   const modalCloseButtons = document.querySelectorAll('.modal__close');
+
+   modalCloseButtons.forEach(function(button) {
+      button.addEventListener('click', () => {
+         html.classList.remove('lock');
+         button.closest('.modal').classList.remove('open');
+      });
+   });
+};
+
+const initFeedbackForm = () => {
+   const feedbackForm = document.querySelector('#feedback-form');
+   const feedbackFormEmail = feedbackForm.querySelector('#feedback-form-email');
+
+   const initFeedbackFormValidation = () => {
+      feedbackFormEmail.addEventListener('input', function() {
+         if (this.validity.typeMismatch) {
+            this.classList.add('error');
+            this.classList.remove('success');
+         } else {
+            this.classList.remove('error');
+            this.classList.add('success');
+         }
+            
+         if (this.value.length === 0) {
+            this.classList.remove('success');
+         }
+      });
+   };
+   
+   const initFeedbackFormSubmit = () => {   
+      feedbackForm.addEventListener('submit', (e) => {
+         e.preventDefault();
+
+         if (feedbackFormEmail.classList.contains('success')) {
+            feedbackForm.innerHTML = '<p>Your message successfully sent</p>';
+         }
+      });
+   };
+
+   initFeedbackFormValidation();
+   initFeedbackFormSubmit();
+};
+
+
+
 window.addEventListener('scroll', () => {
    initFixedHeader();
 });
@@ -61,4 +120,8 @@ document.addEventListener('DOMContentLoaded', function () {
    bodyAutoPaddingTop();
    initFixedHeader();
    initAutoHeightPartnersLinks();
+   initFeedbackModal();
+   initCloseModal();
+   initFeedbackForm();
+
 }, false);
