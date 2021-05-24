@@ -3,7 +3,6 @@
 
 html {
    font-size: 10px;
-   overflow-x: hidden;
 
    &.lock {
       overflow: hidden;
@@ -121,7 +120,7 @@ a {
    
    background: $mainColor4;
    border-radius: $borderRadius1;
-   box-shadow: $boxShadow;
+   box-shadow: $boxShadow1;
 
    &:after {
       content: "";
@@ -184,11 +183,12 @@ a {
    left: 0;
    width: 100%;
    padding: 48px 0;
-   transition: $transitionOverlay;
+   transition: $transition1;
 
    &.fixed {
       padding: 24px 0;
       background-color: $lightColor;
+      box-shadow: $boxShadow2;
    }
 
    // .header__inner
@@ -376,28 +376,40 @@ a {
       background-position: center;
       background-repeat: no-repeat;
 
-      &:hover {
-         transform: scale(1.05);
-      }
-
       // .socials__link--instagram
       &--instagram {
          background-image: url("../images/icons/socials/instagram_white.svg");
+
+         &:hover {
+            background-image: url("../images/icons/socials/instagram_darkblue.svg");
+         }
       }
 
       // .socials__link--facebook
       &--facebook {
          background-image: url("../images/icons/socials/facebook_white.svg");
+
+         &:hover {
+            background-image: url("../images/icons/socials/facebook_darkblue.svg");
+         }
       }
 
       // .socials__link--linkedin
       &--linkedin {
          background-image: url("../images/icons/socials/linkedin_white.svg");
+
+         &:hover {
+            background-image: url("../images/icons/socials/linkedin_darkblue.svg");
+         }
       }
 
       // .socials__link--youtube
       &--youtube {
          background-image: url("../images/icons/socials/youtube_white.svg");
+
+         &:hover {
+            background-image: url("../images/icons/socials/youtube_darkblue.svg");
+         }
       }
    }
 }
@@ -465,20 +477,133 @@ a {
    }
 }
 
-.section {
+.advantages {
+   padding-top: 168px;
+   padding-bottom: 212px;
+
+   &__inner {
+      position: relative;
+   }
+
+   // .advantages__title
+   &__title {
+      position: absolute;
+      top: 0;
+      left: 0;
+   }
+
+   // .advantages__body
+   &__body {
+   }
+
+   // .advantages__list
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      max-width: 860px;
+      margin-left: auto;
+   }
+
+   // .advantages__item
+   &__item {
+      width: calc(50% + -50px);
+
+      &:nth-child(odd):not(:last-child) {
+         margin-right: 100px;
+         margin-top: 256px;
+         margin-bottom: -256px;
+      }
+
+      &:nth-child(even):not(:last-child) {
+         margin-bottom: 100px;
+      }
+   }
 }
-.container-wide {
+
+.advantage-card {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 0px 48px 48px 48px;
+   letter-spacing: 0.05em;
+   border-radius: $borderRadius1;
+   box-shadow: $boxShadow2;
+
+   // .advantage-card__image-wrapper
+   &__image-wrapper {
+      display: flex;
+      max-height: 50vh;
+      margin-top: -24px;
+      margin-bottom: 44px;
+   }
+
+   // .advantage-card__image
+   &__image {
+      width: 100%;
+   }
+
+   // .advantage-card__title
+   &__title {
+      margin-bottom: 16px;
+   }
+
+   // .advantage-card__description
+   &__description {
+      margin-bottom: 32px;
+      color: $grayColor1;
+   }
+
+   // .advantage-card__link
+   &__link {
+      position: relative;
+      line-height: 1;
+      color: $mainColor4;
+      background-color: transparent;
+      box-shadow: initial;
+
+      &.btn {
+         padding: 12px 48px 12px 0px;
+         font-size: 1.4rem;
+      }
+
+      &:before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         right: 0;
+         width: 24px;
+         height: 24px;
+         background: url("../images/icons/arrow-right_blue.svg") center no-repeat;
+      }
+
+      &:hover {
+         color: $lightColor;
+         background-color: $mainColor4;
+
+         &.btn {
+            padding: 12px 48px 12px 24px;
+         }
+
+         &:before {
+            right: 12px;
+            background-image: url("../images/icons/arrow-right_white.svg");
+         }
+
+         &:after {
+            transition-delay: 0.3s;
+         }
+      }
+   }
 }
-.editable-content {
-}
-.btn {
-}
+
 
 @import '_media.scss';
 
 body {
    main {
-      background-color: rgb(214, 201, 201);
+      // background-color: rgb(214, 201, 201);
    }
    
    header {
@@ -489,6 +614,10 @@ body {
       display: none;
 
       &.hero {
+         display: block;
+      }
+
+      &.advantages {
          display: block;
       }
    }

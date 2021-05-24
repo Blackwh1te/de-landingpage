@@ -3,10 +3,10 @@
 const initBurgerButton = () => {
    const burgerButton = document.querySelector('.burger-button');
    const overlay = document.querySelector('.overlay');
-   const body = document.body;
+   const html = document.querySelector('html');
 
    burgerButton.addEventListener('click', function() {
-      body.classList.toggle('lock');
+      html.classList.toggle('lock');
       overlay.classList.toggle('open');
       this.classList.toggle('opened');
       this.setAttribute('aria-expanded', this.classList.contains('opened'));
