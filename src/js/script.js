@@ -81,6 +81,8 @@ const initFeedbackForm = () => {
 
    const initFeedbackFormValidation = () => {
       feedbackFormEmail.addEventListener('input', function() {
+         this.setCustomValidity('');
+
          if (this.validity.typeMismatch) {
             this.classList.add('error');
             this.classList.remove('success');
@@ -100,7 +102,23 @@ const initFeedbackForm = () => {
          e.preventDefault();
 
          if (feedbackFormEmail.classList.contains('success')) {
-            feedbackForm.innerHTML = '<p>Your message successfully sent</p>';
+            let url = "https://blackwh1te.github.io/de-landingpage/";
+            let xhr = new XMLHttpRequest();
+
+            xhr.open('POST', url);            
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("Content-Length", "0");
+            
+            xhr.onreadystatechange = function () {               
+               if (xhr.readyState === 4) {
+                  feedbackForm.innerHTML = '<p>Your message successfully sent</p>';
+               } else {
+                  feedbackForm.innerHTML = '<p>Error. Please, try again later.</p>';
+               }
+            };
+            
+            xhr.send();
          }
       });
    };
