@@ -35,6 +35,23 @@ const initFixedHeader = () => {
    }
 };
 
+const autoHeight = (elements) => {
+   let maxHeight = 0;
+
+   elements.forEach(function(element) {
+      maxHeight = element.scrollHeight;
+   });
+
+   elements.forEach(function(element) {
+      element.style.height = maxHeight + 'px';
+   });
+};
+
+const initAutoHeightPartnersLinks = () => {
+   const partnersLinks = document.querySelectorAll('.partner-card__link');
+   autoHeight(partnersLinks);
+};
+
 window.addEventListener('scroll', () => {
    initFixedHeader();
 });
@@ -44,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
    initBurgerButton();
    // bodyAutoPaddingTop();
    initFixedHeader();
+   initAutoHeightPartnersLinks();
 
 
 
