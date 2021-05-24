@@ -15,18 +15,18 @@ const initBurgerButton = () => {
 
 const bodyAutoPaddingTop = () => {
    const header = document.querySelector('body:not(.front) .header');
-   const headerHeight = header.offsetHeight;
-   
-   const body = document.body;
-   body.style.paddingTop = headerHeight + 'px';
+
+   if (header !== null) {
+      const headerHeight = header.offsetHeight;
+      
+      const body = document.body;
+      body.style.paddingTop = headerHeight + 'px';
+   }
 };
 
 const initFixedHeader = () => {
    const header = document.querySelector('.header');
    const headerHeight = header.offsetHeight;
-   
-   // console.log(window.scrollTop);
-   // if ($(window).scrollTop() > headerHeight) { 
 
    if (window.pageYOffset > headerHeight) { 
       header.classList.add('fixed');
@@ -56,14 +56,9 @@ window.addEventListener('scroll', () => {
    initFixedHeader();
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
    initBurgerButton();
    bodyAutoPaddingTop();
    initFixedHeader();
    initAutoHeightPartnersLinks();
-
-
-
-
 }, false);

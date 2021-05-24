@@ -86,6 +86,20 @@
          padding-bottom: 60px;
       }
    }
+
+   .contacts-us {
+      &__contacts {
+         margin-right: 30px;
+      }
+
+      &__form {
+         flex-basis: 440px;
+      }
+   }
+
+   .contacts-form {
+      padding: 32px;
+   }
 }
 
 @media screen and (max-width: 768px) {
@@ -105,8 +119,16 @@
       font-size: 1.6rem;
    }
 
-   .container {
-      padding: 0 10px;
+   .editable-content ul li:before {
+      top: 11px;
+   }
+
+   .hero__inner,
+   .contacts-banner__body,
+   .container,
+   .container1200 {
+      padding-left: 10px;
+      padding-right: 10px;
    }
 
    .btn {
@@ -114,10 +136,6 @@
    }
 
    .hero {
-      &__inner {
-         padding: 0 10px;
-      }
-
       &__body {
          margin-right: -40px;
       }
@@ -209,6 +227,56 @@
          margin: 0px 0px 32px 0px;
       }
    }
+
+   .contacts-us {
+      &__content {
+         padding-top: 40px;
+         padding-bottom: 40px;
+      }
+
+      &__body {
+         display: block;
+         margin-bottom: 40px;
+      }
+
+      &__contacts {
+         margin: 0px 0px 32px 0px;
+      }
+   }
+
+   .contacts-banner {
+      padding: 40px 0;
+
+      &__title {
+         font-size: 3.4rem;
+      }
+
+      &__subtitle {
+         font-size: 1.6rem;
+      }
+   }
+
+   .contacts {
+      &__image {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         margin-bottom: 32px;
+      }
+
+      &__title {
+         margin-bottom: 16px;
+      }
+   }
+
+   .contacts-form {
+      padding: 25px;
+   }
+
+   .form__submit {
+      padding-top: 18px;
+      padding-bottom: 18px;
+   }
 }
 
 @media screen and (max-width: 576px) {
@@ -293,6 +361,18 @@
       }
    }
 
+   .hero {
+      padding-top: 80px;
+   }
+
+   .advantage-card {
+      padding: 0px 20px 20px 20px;
+
+      &__image-wrapper {
+         margin-bottom: 24px;
+      }
+   }
+
    .partners {
       &__list {
          grid-template-columns: 1fr;
@@ -342,10 +422,27 @@
          }
       }
    }
-}
 
-@media screen and (max-width: 320px) {
-   
+   .form {
+      padding: 15px;
+
+      &__input,
+      &__textarea {
+         padding: 16px 24px;
+      }
+
+      &__label {
+         font-size: 1.4rem;
+      }
+   }
+
+   .contacts-form__title {
+      margin-bottom: 24px;
+   }
+
+   .footer__company-name {
+      font-size: 2.4rem;
+   }
 }
 
 @media (max-width: 812px) and (max-height: 414px) and (orientation: landscape) {
@@ -365,8 +462,12 @@
       font-size: 1.5rem;
    }
 
-   .header.fixed {
-      padding: 8px 0;
+   .header {
+      padding: 20px 0;
+      
+      &.fixed {
+         padding: 8px 0;
+      }
    }
 
    .overlay {
@@ -398,6 +499,26 @@
 
       &__image-wrapper {
          max-height: 35vh;
+      }
+   }
+
+   .contacts-form__title {
+      margin-bottom: 32px;
+   }
+
+   .form {
+      &__submit,
+      &__input,
+      &__textarea {
+         padding: 12px 24px;
+      }
+
+      &__textarea {
+         height: 100px;
+      }
+
+      &__label {
+         font-size: 1.4rem;
       }
    }
 }
