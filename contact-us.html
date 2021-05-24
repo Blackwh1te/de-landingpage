@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/ress.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
-	<title>Afrianska. Home</title>
+	<title>Afrianska. Contact Us</title>
 </head>
-<body class="front">
+<body>
 	<header class="header">
 		<div class="container1200">
 			<div class="header__inner">
@@ -66,150 +66,63 @@
 	</header>
 
 	<main>
-		<section class="hero section">
-			<div class="container-wide">
-				<div class="hero__inner">
-					<div class="hero__body">
-						<h1 class="hero__title">
-							New Automation<br>
-							Tool for Your Home
-						</h1>
-						<div class="hero__description editable-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.</p>
-						</div>
-						<div class="hero__actions">
-							<a class="hero__btn btn" href="/">See Our Project</a>
-						</div>
-					</div>
-					<div class="hero__image-wrapper">
-						<img class="hero__image" src="images/hero.svg" alt="Short description">
-					</div>
+		<section class="contacts-us section">
+			<div class="contacts-us__banner contacts-banner">
+				<div class="contacts-banner__image-wrapper">
+					<img class="contacts-banner__image" src="images/contacts-banner.svg" alt="Short description">
+				</div>
+				<div class="contacts-banner__body">
+					<h1 class="contacts-banner__title">Contact Us</h1>
+					<p class="contacts-banner__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 				</div>
 			</div>
-		</section>
-
-		<section class="advantages section">
-			<div class="container">
-				<div class="advantages__inner">
-					<h2 class="advantages__title section__title">
-						What we do to help<br>
-						our client grow in<br>
-						digital era,
-					</h2>
-					<div class="advantages__body">
-						<ul class="advantages__list">
-							<li class="advantages__item">
-								<div class="advantage-card">
-									<div class="advantage-card__image-wrapper">
-										<img class="advantage-card__image" src="images/advantages/advantage-2.svg" alt="Short description">
-									</div>
-									<div class="advantage-card__body">
-										<h3 class="advantage-card__title">Make Your business To Be Better Famous In Internet</h3>
-										<p class="advantage-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-										<a class="advantage-card__link btn" href="/">Learn more</a>
-									</div>
-								</div>
+			<div class="contacts-us__content">
+				<div class="contacts-us__body">
+					<div class="contacts-us__contacts contacts">
+						<img class="contacts__image" src="images/contacts.svg" alt="Short description">
+						<ul class="contacts-us__list">
+							<li class="contacts-us__item">
+								<h3 class="contacts-us__caption">Address</h3>
+								<a class="contacts-us__link contacts-us__link--address" href="https://yandex.ru/maps/-/CCUaANsBGD" target="_blank"><address>Id convallis placerat sit sed duis id amet volutpat quam a, pharetra.</address></a>
 							</li>
-							<li class="advantages__item">
-								<div class="advantage-card">
-									<div class="advantage-card__image-wrapper">
-										<img class="advantage-card__image" src="images/advantages/advantage-1.svg" alt="Short description">
-									</div>
-									<div class="advantage-card__body">
-										<h3 class="advantage-card__title">Bring Technology To Your Comfrotable Home</h3>
-										<p class="advantage-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-										<a class="advantage-card__link btn" href="/">Learn more</a>
-									</div>
-								</div>
+							<li class="contacts-us__item">
+								<h3 class="contacts-us__caption">Phone</h3>
+								<a class="contacts-us__link contacts-us__link--phone" href="tel:+6281273134321">+62-812-7313-4321</a>
+								<a class="contacts-us__link contacts-us__link--phone" href="tel:+628170001234">+62-817-000-1234</a>
 							</li>
-							<li class="advantages__item">
-								<div class="advantage-card">
-									<div class="advantage-card__image-wrapper">
-										<img class="advantage-card__image" src="images/advantages/advantage-3.svg" alt="Short description">
-									</div>
-									<div class="advantage-card__body">
-										<h3 class="advantage-card__title">Build Your Digital Product That Suitable For Your Need</h3>
-										<p class="advantage-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-										<a class="advantage-card__link btn" href="/">Learn more</a>
-									</div>
-								</div>
+							<li class="contacts-us__item">
+								<h3 class="contacts-us__caption">Online service</h3>
+								<a class="contacts-us__link contacts-us__link--site" href="www.afrianska.com" target="_blank">www.afrianska.com</a>
+								<a class="contacts-us__link contacts-us__link--email" href="mailto:hello.afrian@gmail.com">hello.afrian@gmail.com</a>
 							</li>
 						</ul>
 					</div>
+					<form class="contacts-us__form contacts-form form" id="contacts-form" action="">
+						<h3 class="contacts-form__title">Send Us message</h3>
+						<div class="contacts-form__body">
+							<div class="form__item">
+								<input class="form__input" id="contacts-form-name" name="contacts-form-name" type="text" placeholder="Your Name">
+								<label class="form__label" for="contacts-form-name">Full Name</label>
+								<span class="form__error">Error Lorem, ipsum dolor</span>
+							</div>
+							<div class="form__item">
+								<input class="form__input" id="contacts-form-email" name="contacts-form-email" type="text" placeholder="Your Email">
+								<label class="form__label" for="contacts-form-email">Email</label>
+								<span class="form__error">Error Lorem, ipsum dolor</span>
+							</div>
+							<div class="form__item">
+								<textarea class="form__textarea" id="contacts-form-message" name="contacts-form-message" placeholder="Your Message"></textarea>
+								<label class="form__label" for="contacts-form-name">Message</label>
+								<span class="form__error">Error Lorem, ipsum dolor</span>
+							</div>
+							<div class="form__item">
+								<button class="form__submit btn" id="contacts-form-submit" type="submit">Submit</button>
+							</div>
+						</div>
+					</form>
 				</div>
-			</div>
-		</section>
-
-		<section class="partners section">
-			<div class="container">
-				<div class="partners__inner">
-					<div class="partners__header">
-						<h2 class="partners__title section__title">
-							Our Beloved<br>
-							Client
-						</h2>
-						<p class="partners__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					</div>
-					<div class="partners__body">
-						<ul class="partners__list">
-							<li class="partners__item">
-								<div class="partner-card">
-									<a class="partner-card__link" href="/" target="_blank">
-										<img class="partner-card__image" src="images/partners/logo-client-1.svg" alt="CLIENT 1">
-									</a>
-								</div>
-							</li>
-							<li class="partners__item">
-								<div class="partner-card">
-									<a class="partner-card__link" href="/" target="_blank">
-										<img class="partner-card__image" src="images/partners/logo-client-2.svg" alt="CLIENT 2">
-									</a>
-								</div>
-							</li>
-							<li class="partners__item">
-								<div class="partner-card">
-									<a class="partner-card__link" href="/" target="_blank">
-										<img class="partner-card__image" src="images/partners/logo-client-3.svg" alt="CLIENT 3">
-									</a>
-								</div>
-							</li>
-							<li class="partners__item">
-								<div class="partner-card">
-									<a class="partner-card__link" href="/" target="_blank">
-										<img class="partner-card__image" src="images/partners/logo-client-4.svg" alt="CLIENT 4">
-									</a>
-								</div>
-							</li>
-							<li class="partners__item">
-								<div class="partner-card">
-									<a class="partner-card__link" href="/" target="_blank">
-										<img class="partner-card__image" src="images/partners/logo-client-5.svg" alt="CLIENT 5">
-									</a>
-								</div>
-							</li>
-							<li class="partners__item">
-								<div class="partner-card">
-									<a class="partner-card__link" href="/" target="_blank">
-										<img class="partner-card__image" src="images/partners/logo-client-6.svg" alt="CLIENT 6">
-									</a>
-								</div>
-							</li>
-							<li class="partners__item">
-								<div class="partner-card">
-									<a class="partner-card__link" href="/" target="_blank">
-										<img class="partner-card__image" src="images/partners/logo-client-7.svg" alt="CLIENT 7">
-									</a>
-								</div>
-							</li>
-							<li class="partners__item">
-								<div class="partner-card">
-									<a class="partner-card__link" href="/" target="_blank">
-										More Client
-									</a>
-								</div>
-							</li>
-						</ul>
-					</div>
+				<div class="contacts-us__map-wrapper">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10839.757097607997!2d61.38111352998837!3d55.169656187990064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c592b6b6a8d3d1%3A0x325a48499066c4e9!2z0L_QsNGA0Log0JDQu9C-0LUg0L_QvtC70LU!5e0!3m2!1sru!2sru!4v1621862329847!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 				</div>
 			</div>
 		</section>

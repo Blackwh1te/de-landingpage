@@ -47,6 +47,12 @@ body {
    font-weight: 400;
    line-height: 162%;
    color: $mainColor1;
+
+   &:not(.front) {
+      .header {
+         background-color: $lightColor;
+      }
+   }
 }
 
 main {
