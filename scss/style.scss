@@ -67,7 +67,6 @@ footer {
 }
 
 h1 {
-   font-family: $accentFontFamily;
    font-size: 6.4rem;
    font-weight: 700;
    line-height: 116%;
@@ -455,6 +454,7 @@ a {
    // .hero__title
    &__title {
       margin-bottom: 32px;
+      font-family: $accentFontFamily;
    }
 
    // .hero__description
@@ -879,36 +879,134 @@ a {
    }
 }
 
+.contacts-us {
+   // .contacts-us__banner
+   &__banner {
+   }
+
+   // .contacts-us__content
+   &__content {
+      padding-top: 57px;
+      padding-bottom: 96px;
+   }
+
+   // .contacts-us__content-inner
+   &__content-inner {
+   }
+
+   // .contacts-us__body
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   // .contacts-us__contacts
+   &__contacts {
+      margin-right: 30px;
+   }
+   
+   // .contacts-us__list
+   &__list {
+   }
+   // .contacts-us__item
+   &__item {
+   }
+   // .contacts-us__caption
+   &__caption {
+   }
+   // .contacts-us__link
+   &__link {
+   }
+   // .contacts-us__link--address
+   &__link--address {
+   }
+   // .contacts-us__link--phone
+   &__link--phone {
+   }
+   // .contacts-us__link--site
+   &__link--site {
+   }
+   // .contacts-us__link--email
+   &__link--email {
+   }
+
+   // .contacts-us__form
+   &__form {
+      flex: 0 0 540px;
+   }
+
+   // .contacts-us__map-wrapper
+   &__map-wrapper {
+   }
+}
+
+.contacts-banner {
+   padding: 50px 0;
+   color: $lightColor;
+   background: url("../images/contacts-banner.svg") center/cover no-repeat;
+
+   // .contacts-banner__body
+   &__body {
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+   }
+
+   // .contacts-banner__title
+   &__title {
+      margin-bottom: 16px;
+      font-size: 4.4rem;
+      line-height: 168%;
+   }
+
+   // .contacts-banner__subtitle
+   &__subtitle {
+      font-size: 2rem;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      color: $mainColor11;
+   }
+}
+
+.contacts {
+   // .contacts__image
+   &__image {
+   }
+}
+
+.contacts-form {
+   // .contacts-form__title
+   &__title {
+   }
+   // .contacts-form__body
+   &__body {
+   }
+}
+
+.form {
+   // .form__item
+   &__item {
+   }
+   // .form__input
+   &__input {
+   }
+   // .form__label
+   &__label {
+   }
+   // .form__error
+   &__error {
+   }
+   // .form__textarea
+   &__textarea {
+   }
+   // .form__submit
+   &__submit {
+   }
+}
+.btn {
+}
 
 
 @import '_media.scss';
-
-body {
-   main {
-      // background-color: rgb(214, 201, 201);
-   }
-   
-   header {
-      // background-color: $lightColor;
-   }
-
-   // section {
-   //    display: none;
-
-   //    &.hero {
-   //       display: block;
-   //    }
-
-   //    &.advantages {
-   //       display: block;
-   //    }
-
-   //    &.partners {
-   //       display: block;
-   //    }
-   // }
-
-   // footer {
-   //    display: none;
-   // }
-}
