@@ -1,0 +1,51 @@
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../fonts/Gilroy-Light.eot');
+   src: local('Gilroy Light'), local('Gilroy-Light'),
+       url('../fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gilroy-Light.woff2') format('woff2'),
+       url('../fonts/Gilroy-Light.woff') format('woff'),
+       url('../fonts/Gilroy-Light.ttf') format('truetype');
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../fonts/Gilroy-Regular.eot');
+   src: local('Gilroy Regular'), local('Gilroy-Regular'),
+       url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+       url('../fonts/Gilroy-Regular.woff') format('woff'),
+       url('../fonts/Gilroy-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../fonts/Gilroy-Semibold.eot');
+   src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+       url('../fonts/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+       url('../fonts/Gilroy-Semibold.woff') format('woff'),
+       url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+   font-weight: 600;
+   font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Galien-Regular';
+	src: url('../fonts/Galien-Regular.eot');
+	src: local('☺'), url('../fonts/Galien-Regular.woff') format('woff'), url('../fonts/Galien-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Galien-Regular';
+	src: url('../fonts/Galien-Bold.eot');
+	src: local('☺'), url('../fonts/Galien-Bold.woff') format('woff'), url('../fonts/Galien-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
