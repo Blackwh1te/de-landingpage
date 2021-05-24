@@ -17,6 +17,13 @@ html {
    padding: 0 15px;
 }
 
+.container1200 {
+   width: 100%;
+   max-width: 1230px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
 .container-wide {
    width: 100%;
    max-width: 1366px;
@@ -90,6 +97,10 @@ img {
    max-width: 100%;
 }
 
+ul {
+   list-style: none;
+}
+
 a {
    display: inline-block;
    text-decoration: none;
@@ -102,15 +113,15 @@ a {
    display: inline-flex;
    justify-content: center;
    align-items: center;
-   padding: 18px 32px;
+   padding: 15px 48px;
 
-   font-weight: 700;
    text-align: center;
    white-space: nowrap;
    color: $lightColor;
    
-   background: $mainColor1;
-   border: 2px solid $mainColor1;
+   background: $mainColor4;
+   border-radius: $borderRadius1;
+   box-shadow: $boxShadow;
 
    &:after {
       content: "";
@@ -166,16 +177,72 @@ a {
    }
 }
 
+.header {
+   position: fixed;
+   z-index: 10;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 48px 0;
+   transition: $transitionOverlay;
+
+   &.fixed {
+      padding: 24px 0;
+      background-color: $lightColor;
+   }
+
+   // .header__inner
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__logo,
+   &__burger-button {
+      position: relative;
+      z-index: 20;
+   }
+
+   // .header__burger-button
+   &__burger-button {
+   }
+   
+   // .header__overlay
+   &__overlay {
+   }
+}
+
+.logo {
+   // .logo__link
+   &__link {
+      display: flex;
+
+      &:hover {
+         transform: scale(1.05);
+      }
+   }
+
+   // .logo__image
+   &__image {
+   }
+}
+
 .burger-button {
    display: flex;
-   width: 100px;
-   height: 100px;
+   width: 32px;
+   height: 32px;
    background-color: transparent;
    border: none;
    cursor: pointer;
-   
-   &:focus {
-      outline: none;
+
+   &:hover {
+      // transform: scale(1.05);
+      background-color: $mainColor5;
+
+      .burger-button__line {
+         stroke: $lightColor;
+      }
    }
 
    svg {
@@ -188,6 +255,7 @@ a {
       stroke: $mainColor3;
       stroke-width: 6;
       transition: 
+         stroke 0.3s ease,
          stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
          stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -208,6 +276,8 @@ a {
    }
 
    &.opened .burger-button__line {
+      stroke: $lightColor;
+
       &--1 {
          stroke-dasharray: 90 207;
          stroke-dashoffset: -134;
@@ -228,31 +298,202 @@ a {
    }
 }
 
+.overlay {
+   position: fixed;
+   z-index: 10;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   padding-top: 128px;
+   padding-bottom: 48px;
+   background-color: $mainColor4;
+   transform: translateX(100%);
+   transition: $transitionOverlay;
 
-/***********************/
-/*** <media queries> ***/
-@media screen and (max-width: 1200px) {
-   
+   &.open {
+      transform: translateX(0);
+   }
+
+   // .overlay__inner
+   &__inner {
+      overflow-y: auto;
+      max-height: calc(100vh + -128px + -24px);
+   }
+
+   // .overlay__navigation
+   &__navigation {
+      margin-bottom: 48px;
+   }
+
+   // .overlay__socials
+   &__socials {
+      
+   }
 }
 
-@media screen and (max-width: 992px) {
-   
+.navigation {
+   // .navigation__list
+   &__list {
+   }
+
+   // .navigation__item
+   &__item {
+   }
+
+   // .navigation__link
+   &__link {
+      display: block;
+      padding: 16px 0;
+      font-size: 2.4rem;
+      color: $lightColor;
+
+      &:hover {
+         color: $mainColor1;
+      }
+   }
 }
 
-@media screen and (max-width: 768px) {
-   
+.socials {
+   // .socials__list
+   &__list {
+      display: flex;
+      align-items: center;
+   }
+
+   // .socials__item
+   &__item {
+      &:not(:last-child) {
+         margin-right: 16px;
+      }
+   }
+
+   // .socials__link
+   &__link {
+      width: 32px;
+      height: 32px;
+      font-size: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &:hover {
+         transform: scale(1.05);
+      }
+
+      // .socials__link--instagram
+      &--instagram {
+         background-image: url("../images/icons/socials/instagram_white.svg");
+      }
+
+      // .socials__link--facebook
+      &--facebook {
+         background-image: url("../images/icons/socials/facebook_white.svg");
+      }
+
+      // .socials__link--linkedin
+      &--linkedin {
+         background-image: url("../images/icons/socials/linkedin_white.svg");
+      }
+
+      // .socials__link--youtube
+      &--youtube {
+         background-image: url("../images/icons/socials/youtube_white.svg");
+      }
+   }
 }
 
-@media screen and (max-width: 576px) {
-   
+.hero {
+   position: relative;
+   padding-top: 100px;
+   padding-bottom: 60px;
+   background-color: $lightColor;
+
+   &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0) 31.12%);
+      opacity: 0.2;
+   }
+
+   // .hero__inner
+   &__inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      max-width: 1180px;
+      padding: 0 15px;
+      margin-left: auto;
+   }
+
+   // .hero__body
+   &__body {
+      margin-right: -70px;
+   }
+
+   // .hero__title
+   &__title {
+      margin-bottom: 32px;
+   }
+
+   // .hero__description
+   &__description {
+      max-width: 85%;
+      margin-bottom: 72px;
+      color: $grayColor1;
+   }
+
+   // .hero__actions
+   &__actions {
+   }
+
+   // .hero__btn
+   &__btn {
+   }
+
+   // .hero__image-wrapper
+   &__image-wrapper {
+      flex: 0 0 60%;
+      display: flex;
+   }
+
+   // .hero__image
+   &__image {
+   }
 }
 
-@media screen and (max-width: 414px) {
-   
+.section {
+}
+.container-wide {
+}
+.editable-content {
+}
+.btn {
 }
 
-@media screen and (max-width: 320px) {
+@import '_media.scss';
+
+body {
+   main {
+      background-color: rgb(214, 201, 201);
+   }
    
+   header {
+      // background-color: $lightColor;
+   }
+
+   section {
+      display: none;
+
+      &.hero {
+         display: block;
+      }
+   }
+
+   footer {
+      display: none;
+   }
 }
-/*** </media queries> ***/
-/************************/
