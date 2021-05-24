@@ -2,6 +2,7 @@
 @import '_variables.scss';
 
 html {
+   font-size: 10px;
    overflow-x: hidden;
 
    &.lock {
@@ -11,14 +12,14 @@ html {
 
 .container {
    width: 100%;
-   max-width: 1200px;
+   max-width: 970px;
    margin: 0 auto;
    padding: 0 15px;
 }
 
-.container1440 {
+.container-wide {
    width: 100%;
-   max-width: 1440px;
+   max-width: 1366px;
    margin: 0 auto;
 }
 
@@ -36,11 +37,10 @@ body {
    overflow-x: hidden;
 
    font-family: $mainFontFamily;
-   // font-family: $accentFontFamily;
-   font-size: 18px;
-   font-weight: 300;
-   line-height: 150%;
-   color: $darkColor;
+   font-size: 1.6rem;
+   font-weight: 400;
+   line-height: 162%;
+   color: $mainColor1;
 }
 
 main {
@@ -54,25 +54,27 @@ footer {
    flex: 0 0 auto;
 }
 
-.section {
-   padding: 80px 0;
+h1 {
+   font-family: $accentFontFamily;
+   font-size: 6.4rem;
+   font-weight: 700;
+   line-height: 116%;
+   letter-spacing: 0.04em;
 }
 
-h1,
 h2 {
-   font-size: 32px;
-   font-weight: 700;
-   line-height: 150%;
-   text-transform: uppercase;
-   text-decoration: underline;
-   color: $mainColor;
+   font-size: 3.6rem;
+   font-weight: 600;
+   line-height: 128%;
+   letter-spacing: 0.05em;
+   color: $mainColor2;
 }
 
 h3 {
-   font-size: 24px;
-   font-weight: 700;
+   font-size: 2rem;
+   font-weight: 600;
    line-height: 150%;
-   text-transform: uppercase;
+   letter-spacing: 0.05em;
 }
 
 a,
@@ -84,12 +86,8 @@ textarea,
    transition: $transition1;
 }
 
-button,
-input,
-textarea {
-   &:focus {
-      outline: none;
-   }
+img {
+   max-width: 100%;
 }
 
 a {
@@ -111,8 +109,8 @@ a {
    white-space: nowrap;
    color: $lightColor;
    
-   background: $mainColor;
-   border: 2px solid $mainColor;
+   background: $mainColor1;
+   border: 2px solid $mainColor1;
 
    &:after {
       content: "";
@@ -134,21 +132,6 @@ a {
 
    &:active {
       transform: scale(1.02);
-   }
-
-   // .btn--transparent
-   &--transparent {
-      color: $mainColor;
-      background: transparent;
-
-      &:hover {
-         color: $lightColor;
-         background: $mainColor;
-
-         &:after {
-            transition-delay: 0.15s;
-         }
-      }
    }
 }
 
@@ -173,13 +156,75 @@ a {
             left: 0;
             width: 12px;
             height: 1px;
-            background: $accentColor;
+            background: $mainColor1;
          }
       }
    }
 
    li:not(:last-child) {
       margin-bottom: 24px;
+   }
+}
+
+.burger-button {
+   display: flex;
+   width: 100px;
+   height: 100px;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   
+   &:focus {
+      outline: none;
+   }
+
+   svg {
+      width: 100%;
+      height: 100%;
+   }
+
+   &__line {
+      fill: none;
+      stroke: $mainColor3;
+      stroke-width: 6;
+      transition: 
+         stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+         stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &--1 {
+         stroke-dasharray: 60 207;
+         stroke-width: 6;
+      }
+
+      &--2 {
+         stroke-dasharray: 60 60;
+         stroke-width: 6;
+      }
+
+      &--3 {
+         stroke-dasharray: 60 207;
+         stroke-width: 6;
+      }
+   }
+
+   &.opened .burger-button__line {
+      &--1 {
+         stroke-dasharray: 90 207;
+         stroke-dashoffset: -134;
+         stroke-width: 6;
+      }
+
+      &--2 {
+         stroke-dasharray: 1 60;
+         stroke-dashoffset: -30;
+         stroke-width: 6;
+      }
+
+      &--3 {
+         stroke-dasharray: 90 207;
+         stroke-dashoffset: -134;
+         stroke-width: 6;
+      }
    }
 }
 
