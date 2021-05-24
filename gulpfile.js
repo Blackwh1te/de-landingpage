@@ -69,7 +69,7 @@ function serve() {
 		notify: false, // Отключаем уведомления
    });
 
-   watch('src/**.html', series(html)).on('change', sync.reload);
+   watch('src/**/*.html', series(html)).on('change', sync.reload);
    watch('src/scss/**.scss', series(scss)).on('change', sync.reload);  
    watch('src/js/**.js', series(scripts)).on('change', sync.reload); 
    watch('src/images/src/**/*', series(images)).on('change', sync.reload);
