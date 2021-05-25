@@ -78,7 +78,39 @@
 					</div>
 				</div>
 				<div class="work__actions">
-					<a class="work__btn btn" href="/">Let’s Talk</a>
+					<button class="work__btn btn" type="button">Let’s Talk</button>
+					<div class="modal feedback-modal" id="feedback-modal">
+						<div class="modal__overlay">
+							<div class="modal__inner">
+								<button class="modal__close" type="button"></button>
+								<div class="modal__content">
+									<form class="feedback-modal__form contacts-form form" id="feedback-form" action="">
+										<h3 class="contacts-form__title">Send Us message</h3>
+										<div class="contacts-form__body">
+											<div class="form__item">
+												<input class="form__input" id="feedback-form-name" name="feedback-form-name" type="text" placeholder="Your Name">
+												<label class="form__label" for="feedback-form-name">Full Name</label>
+												<span class="form__error">Error Lorem, ipsum dolor</span>
+											</div>
+											<div class="form__item">
+												<input class="form__input" id="feedback-form-email" name="feedback-form-email" type="email" placeholder="Your Email">
+												<label class="form__label" for="feedback-form-email">Email</label>
+												<span class="form__error">Error: invalid email format</span>
+											</div>
+											<div class="form__item">
+												<textarea class="form__textarea" id="feedback-form-message" name="feedback-form-message" placeholder="Your Message"></textarea>
+												<label class="form__label" for="feedback-form-name">Message</label>
+												<span class="form__error">Error Lorem, ipsum dolor</span>
+											</div>
+											<div class="form__item">
+												<button class="form__submit btn" id="feedback-form-submit" type="submit">Submit</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

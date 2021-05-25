@@ -127,8 +127,6 @@ const initFeedbackForm = () => {
    initFeedbackFormSubmit();
 };
 
-
-
 window.addEventListener('scroll', () => {
    initFixedHeader();
 });
